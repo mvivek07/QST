@@ -263,6 +263,17 @@ export default function Home() {
                 .learn-more-btn:hover { transform: scale(1.05); box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
                 .contact-btn { padding: 1.5rem 4rem; background: white; color: var(--primary-blue); border-radius: 12px; font-size: 1.2rem; font-weight: 800; display: inline-block; transition: all 0.3s ease; }
                 .contact-btn:hover { background: var(--accent-blue); color: white; transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.3); }
+
+                @media (max-width: 768px) {
+                    .hero-h1 { font-size: 2.6rem; letter-spacing: -1px; }
+                    .hero-p { font-size: 1rem; }
+                    .contact-btn { padding: 1rem 2rem; font-size: 1rem; }
+                    .read-more { padding: 1rem 2.5rem; }
+                    .learn-more-btn { padding: 1rem 2.5rem; }
+                }
+                @media (min-width: 769px) and (max-width: 1024px) {
+                    .hero-h1 { font-size: 4rem; }
+                }
             `}</style>
         </div>
     )

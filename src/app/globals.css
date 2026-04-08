@@ -273,17 +273,112 @@ footer {
     padding: 4rem 5%;
 }
 
+/* ── Responsive utility classes ── */
+.rg-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.rg-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.rg-form { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+/* ── Mobile: ≤ 768px ── */
 @media (max-width: 768px) {
-    .intro, .feature-row, .feature-row:nth-child(even), .contact {
-        flex-direction: column;
+
+    /* Sections */
+    section {
+        padding: 60px 5%;
     }
-    .solutions-grid {
-        grid-template-columns: 1fr;
+
+    /* Hero */
+    .hero {
+        padding-top: 80px;
     }
     .hero h1 {
+        font-size: 2.2rem;
+        letter-spacing: -0.5px;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* Intro */
+    .intro {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+    .intro-content h2 {
+        font-size: 2.4rem;
+    }
+    .intro-images {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    .intro-images img {
+        height: 200px;
+    }
+
+    /* Solutions */
+    .solutions-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    /* Contact section on home */
+    .contact {
+        flex-direction: column;
+        gap: 2.5rem;
+        padding: 60px 5%;
+    }
+    .contact-form-container {
+        padding: 1.75rem;
+    }
+    .contact-info h2 {
         font-size: 2.5rem;
     }
-    header nav {
-        display: none;
+
+    /* Feature rows */
+    .feature-row,
+    .feature-row:nth-child(even) {
+        flex-direction: column;
+    }
+
+    /* Responsive grid utilities */
+    .rg-2 {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    .rg-2 [style*="order: 2"],
+    .rg-2 [style*="order:2"] {
+        order: 1 !important;
+    }
+    .rg-3 {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .rg-form {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer */
+    footer {
+        padding: 2.5rem 5%;
+    }
+}
+
+/* ── Tablet: 769px – 1024px ── */
+@media (min-width: 769px) and (max-width: 1024px) {
+    section {
+        padding: 80px 5%;
+    }
+    .intro {
+        gap: 3rem;
+    }
+    .solutions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .rg-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .contact {
+        flex-direction: column;
+        gap: 3rem;
+        padding: 80px 5%;
     }
 }

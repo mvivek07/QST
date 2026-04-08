@@ -2,14 +2,14 @@
 
 export default function About() {
     return (
-        <div style={{ minHeight: '100vh', backgroundColor: '#ffffff', paddingTop: '100px' }}>
+        <div style={{ minHeight: '100vh', backgroundColor: '#ffffff', paddingTop: '80px' }}>
 
-            {/* Hero Section — Centered */}
-            <div style={{ padding: '60px 40px 80px', maxWidth: '1100px', margin: '0 auto', textAlign: 'center' }}>
+            {/* Hero */}
+            <div style={{ padding: '60px 6% 80px', maxWidth: '1100px', margin: '0 auto', textAlign: 'center' }}>
                 <p style={{ color: '#2563eb', fontWeight: 800, fontSize: '11px', letterSpacing: '3px', textTransform: 'uppercase', marginBottom: '16px' }}>
                     Our Mission
                 </p>
-                <h1 style={{ fontSize: '52px', fontWeight: 900, color: '#1b2a6d', lineHeight: 1.1, marginBottom: '24px' }}>
+                <h1 style={{ fontWeight: 900, color: '#1b2a6d', lineHeight: 1.1, marginBottom: '24px' }} className="about-h1">
                     Security for the Modern Era.
                 </h1>
                 <p style={{ fontSize: '18px', color: '#6b7280', lineHeight: 1.8, maxWidth: '640px', margin: '0 auto' }}>
@@ -18,8 +18,8 @@ export default function About() {
             </div>
 
             {/* Engineering Section */}
-            <div style={{ backgroundColor: '#f8fafc', padding: '80px 40px' }}>
-                <div style={{ maxWidth: '1100px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center' }}>
+            <div style={{ backgroundColor: '#f8fafc', padding: '80px 6%' }}>
+                <div className="rg-2" style={{ maxWidth: '1100px', margin: '0 auto' }}>
                     <div>
                         <img
                             src="/images/security_room.png"
@@ -28,7 +28,7 @@ export default function About() {
                         />
                     </div>
                     <div>
-                        <h2 style={{ fontSize: '36px', fontWeight: 900, color: '#1b2a6d', marginBottom: '20px', lineHeight: 1.2 }}>
+                        <h2 style={{ fontWeight: 900, color: '#1b2a6d', marginBottom: '20px', lineHeight: 1.2 }} className="about-h2">
                             Engineering Excellence
                         </h2>
                         <p style={{ fontSize: '17px', color: '#6b7280', lineHeight: 1.8 }}>
@@ -38,17 +38,17 @@ export default function About() {
                 </div>
             </div>
 
-            {/* Values Section */}
-            <div style={{ padding: '80px 40px', textAlign: 'center' }}>
+            {/* Values */}
+            <div style={{ padding: '80px 6%', textAlign: 'center' }}>
                 <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
                     <p style={{ color: '#2563eb', fontWeight: 800, fontSize: '11px', letterSpacing: '3px', textTransform: 'uppercase', marginBottom: '12px' }}>
                         Our Values
                     </p>
-                    <h2 style={{ fontSize: '42px', fontWeight: 900, color: '#1b2a6d', marginBottom: '56px', lineHeight: 1.1 }}>
+                    <h2 style={{ fontWeight: 900, color: '#1b2a6d', marginBottom: '56px', lineHeight: 1.1 }} className="about-h2">
                         The QuantumSight Standard
                     </h2>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '32px' }}>
+                    <div className="rg-3">
                         {[
                             {
                                 icon: (
@@ -80,7 +80,7 @@ export default function About() {
                         ].map((val, i) => (
                             <div
                                 key={i}
-                                style={{ backgroundColor: 'white', border: '1px solid #e5e7eb', borderRadius: '20px', padding: '40px 32px', boxShadow: '0 4px 20px rgba(0,0,0,0.04)', transition: 'all 0.2s' }}
+                                style={{ backgroundColor: 'white', border: '1px solid #e5e7eb', borderRadius: '20px', padding: '40px 32px', boxShadow: '0 4px 20px rgba(0,0,0,0.04)' }}
                             >
                                 <div style={{ width: '56px', height: '56px', backgroundColor: '#eff6ff', borderRadius: '14px', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px' }}>
                                     {val.icon}
@@ -97,9 +97,9 @@ export default function About() {
                 </div>
             </div>
 
-            {/* CTA Banner */}
-            <div style={{ backgroundColor: '#1b2a6d', padding: '80px 40px', textAlign: 'center' }}>
-                <h2 style={{ fontSize: '36px', fontWeight: 900, color: 'white', marginBottom: '24px', fontStyle: 'italic' }}>
+            {/* CTA */}
+            <div style={{ backgroundColor: '#1b2a6d', padding: '80px 6%', textAlign: 'center' }}>
+                <h2 style={{ fontWeight: 900, color: 'white', marginBottom: '24px', fontStyle: 'italic' }} className="about-h2">
                     Ready to secure your future?
                 </h2>
                 <a
@@ -109,6 +109,15 @@ export default function About() {
                     Work With Us
                 </a>
             </div>
+
+            <style jsx>{`
+                .about-h1 { font-size: 52px; }
+                .about-h2 { font-size: 36px; }
+                @media (max-width: 768px) {
+                    .about-h1 { font-size: 32px; }
+                    .about-h2 { font-size: 26px; }
+                }
+            `}</style>
         </div>
     )
 }

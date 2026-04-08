@@ -8,148 +8,102 @@ export default function Contact() {
     }
 
     return (
-        <div style={{ paddingTop: '120px', minHeight: '100vh', backgroundColor: '#f8fafc' }}>
-            <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '60px 40px' }}>
+        <div style={{ paddingTop: '100px', minHeight: '100vh', backgroundColor: '#f8fafc' }}>
+            <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '60px 6%' }}>
 
-                {/* Page Title */}
+                {/* Title */}
                 <div style={{ marginBottom: '56px', textAlign: 'center' }}>
                     <p style={{ color: '#2563eb', fontWeight: 800, fontSize: '12px', letterSpacing: '3px', textTransform: 'uppercase', marginBottom: '16px' }}>
                         Contact Us
                     </p>
-                    <h1 style={{ fontSize: '52px', fontWeight: 900, color: '#1b2a6d', lineHeight: 1.1, marginBottom: '16px' }}>
-                        Let's Work Together
+                    <h1 style={{ fontWeight: 900, color: '#1b2a6d', lineHeight: 1.1, marginBottom: '16px' }} className="contact-h1">
+                        Let&#39;s Work Together
                     </h1>
                     <p style={{ fontSize: '18px', color: '#6b7280', maxWidth: '600px', lineHeight: 1.7, margin: '0 auto' }}>
-                        Get in touch with us for any inquiries or assistance regarding our surveillance equipment products and services. We are here to help you with your security needs.
+                        Get in touch with us for any inquiries or assistance regarding our surveillance equipment products and services.
                     </p>
                 </div>
 
-                {/* Two Column Grid */}
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: '60px', alignItems: 'start' }}>
+                {/* Two Column */}
+                <div className="contact-layout">
 
-                    {/* Left: Contact Details */}
+                    {/* Contact Details */}
                     <div>
                         <div style={{ backgroundColor: 'white', borderRadius: '20px', padding: '40px', boxShadow: '0 4px 24px rgba(0,0,0,0.06)', border: '1px solid #e5e7eb' }}>
-                            
                             <div style={{ marginBottom: '36px', paddingBottom: '36px', borderBottom: '1px solid #f3f4f6' }}>
-                                <p style={{ fontSize: '10px', fontWeight: 800, letterSpacing: '3px', textTransform: 'uppercase', color: '#9ca3af', marginBottom: '12px' }}>
-                                    Our Office
-                                </p>
-                                <p style={{ fontSize: '17px', fontWeight: 700, color: '#1b2a6d', lineHeight: 1.6 }}>
-                                    Vijaya Complex, Mannagudda,
-                                </p>
-                                <p style={{ fontSize: '17px', color: '#6b7280', lineHeight: 1.6 }}>
-                                    Mangalore - 575003
-                                </p>
-                                <p style={{ fontSize: '17px', color: '#6b7280', lineHeight: 1.6 }}>
-                                    Karnataka, India
-                                </p>
+                                <p style={{ fontSize: '10px', fontWeight: 800, letterSpacing: '3px', textTransform: 'uppercase', color: '#9ca3af', marginBottom: '12px' }}>Our Office</p>
+                                <p style={{ fontSize: '17px', fontWeight: 700, color: '#1b2a6d', lineHeight: 1.6 }}>Vijaya Complex, Mannagudda,</p>
+                                <p style={{ fontSize: '17px', color: '#6b7280', lineHeight: 1.6 }}>Mangalore - 575003</p>
+                                <p style={{ fontSize: '17px', color: '#6b7280', lineHeight: 1.6 }}>Karnataka, India</p>
                             </div>
-
                             <div style={{ marginBottom: '36px', paddingBottom: '36px', borderBottom: '1px solid #f3f4f6' }}>
-                                <p style={{ fontSize: '10px', fontWeight: 800, letterSpacing: '3px', textTransform: 'uppercase', color: '#9ca3af', marginBottom: '12px' }}>
-                                    Phone
-                                </p>
-                                <p style={{ fontSize: '22px', fontWeight: 900, color: '#1b2a6d' }}>
-                                    +91 9730323315
-                                </p>
+                                <p style={{ fontSize: '10px', fontWeight: 800, letterSpacing: '3px', textTransform: 'uppercase', color: '#9ca3af', marginBottom: '12px' }}>Phone</p>
+                                <p style={{ fontSize: '22px', fontWeight: 900, color: '#1b2a6d' }}>+91 9730323315</p>
                             </div>
-
                             <div>
-                                <p style={{ fontSize: '10px', fontWeight: 800, letterSpacing: '3px', textTransform: 'uppercase', color: '#9ca3af', marginBottom: '12px' }}>
-                                    Email
-                                </p>
-                                <p style={{ fontSize: '16px', fontWeight: 700, color: '#2563eb' }}>
-                                    contactus@quantumsighttech.com
-                                </p>
+                                <p style={{ fontSize: '10px', fontWeight: 800, letterSpacing: '3px', textTransform: 'uppercase', color: '#9ca3af', marginBottom: '12px' }}>Email</p>
+                                <p style={{ fontSize: '16px', fontWeight: 700, color: '#2563eb' }}>contactus@quantumsighttech.com</p>
                             </div>
                         </div>
                     </div>
 
-                    {/* Right: Form */}
+                    {/* Form */}
                     <div style={{ backgroundColor: 'white', borderRadius: '20px', padding: '48px', boxShadow: '0 4px 24px rgba(0,0,0,0.06)', border: '1px solid #e5e7eb' }}>
-                        <h2 style={{ fontSize: '26px', fontWeight: 800, color: '#1b2a6d', marginBottom: '36px' }}>
-                            Send us a Message
-                        </h2>
-
+                        <h2 style={{ fontSize: '26px', fontWeight: 800, color: '#1b2a6d', marginBottom: '36px' }}>Send us a Message</h2>
                         <form onSubmit={handleSubmit}>
-                            {/* Name Row */}
-                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginBottom: '24px' }}>
+                            <div className="rg-form" style={{ marginBottom: '24px' }}>
                                 <div>
-                                    <label style={{ display: 'block', fontSize: '11px', fontWeight: 800, letterSpacing: '2px', textTransform: 'uppercase', color: '#9ca3af', marginBottom: '8px' }}>
-                                        First Name
-                                    </label>
-                                    <input
-                                        type="text"
-                                        placeholder="John"
-                                        required
-                                        style={{ width: '100%', padding: '14px 16px', borderRadius: '12px', border: '2px solid #e5e7eb', fontSize: '15px', color: '#1b2a6d', backgroundColor: '#f9fafb', outline: 'none', fontWeight: 600 }}
-                                    />
+                                    <label style={{ display: 'block', fontSize: '11px', fontWeight: 800, letterSpacing: '2px', textTransform: 'uppercase', color: '#9ca3af', marginBottom: '8px' }}>First Name</label>
+                                    <input type="text" placeholder="John" required style={{ width: '100%', padding: '14px 16px', borderRadius: '12px', border: '2px solid #e5e7eb', fontSize: '15px', color: '#1b2a6d', backgroundColor: '#f9fafb', outline: 'none', fontWeight: 600 }} />
                                 </div>
                                 <div>
-                                    <label style={{ display: 'block', fontSize: '11px', fontWeight: 800, letterSpacing: '2px', textTransform: 'uppercase', color: '#9ca3af', marginBottom: '8px' }}>
-                                        Last Name
-                                    </label>
-                                    <input
-                                        type="text"
-                                        placeholder="Doe"
-                                        required
-                                        style={{ width: '100%', padding: '14px 16px', borderRadius: '12px', border: '2px solid #e5e7eb', fontSize: '15px', color: '#1b2a6d', backgroundColor: '#f9fafb', outline: 'none', fontWeight: 600 }}
-                                    />
+                                    <label style={{ display: 'block', fontSize: '11px', fontWeight: 800, letterSpacing: '2px', textTransform: 'uppercase', color: '#9ca3af', marginBottom: '8px' }}>Last Name</label>
+                                    <input type="text" placeholder="Doe" required style={{ width: '100%', padding: '14px 16px', borderRadius: '12px', border: '2px solid #e5e7eb', fontSize: '15px', color: '#1b2a6d', backgroundColor: '#f9fafb', outline: 'none', fontWeight: 600 }} />
                                 </div>
                             </div>
-
-                            {/* Email */}
                             <div style={{ marginBottom: '24px' }}>
-                                <label style={{ display: 'block', fontSize: '11px', fontWeight: 800, letterSpacing: '2px', textTransform: 'uppercase', color: '#9ca3af', marginBottom: '8px' }}>
-                                    Work Email
-                                </label>
-                                <input
-                                    type="email"
-                                    placeholder="john@company.com"
-                                    required
-                                    style={{ width: '100%', padding: '14px 16px', borderRadius: '12px', border: '2px solid #e5e7eb', fontSize: '15px', color: '#1b2a6d', backgroundColor: '#f9fafb', outline: 'none', fontWeight: 600 }}
-                                />
+                                <label style={{ display: 'block', fontSize: '11px', fontWeight: 800, letterSpacing: '2px', textTransform: 'uppercase', color: '#9ca3af', marginBottom: '8px' }}>Work Email</label>
+                                <input type="email" placeholder="john@company.com" required style={{ width: '100%', padding: '14px 16px', borderRadius: '12px', border: '2px solid #e5e7eb', fontSize: '15px', color: '#1b2a6d', backgroundColor: '#f9fafb', outline: 'none', fontWeight: 600 }} />
                             </div>
-
-                            {/* Phone */}
                             <div style={{ marginBottom: '24px' }}>
-                                <label style={{ display: 'block', fontSize: '11px', fontWeight: 800, letterSpacing: '2px', textTransform: 'uppercase', color: '#9ca3af', marginBottom: '8px' }}>
-                                    Phone Number
-                                </label>
-                                <input
-                                    type="tel"
-                                    placeholder="+91 00000 00000"
-                                    style={{ width: '100%', padding: '14px 16px', borderRadius: '12px', border: '2px solid #e5e7eb', fontSize: '15px', color: '#1b2a6d', backgroundColor: '#f9fafb', outline: 'none', fontWeight: 600 }}
-                                />
+                                <label style={{ display: 'block', fontSize: '11px', fontWeight: 800, letterSpacing: '2px', textTransform: 'uppercase', color: '#9ca3af', marginBottom: '8px' }}>Phone Number</label>
+                                <input type="tel" placeholder="+91 00000 00000" style={{ width: '100%', padding: '14px 16px', borderRadius: '12px', border: '2px solid #e5e7eb', fontSize: '15px', color: '#1b2a6d', backgroundColor: '#f9fafb', outline: 'none', fontWeight: 600 }} />
                             </div>
-
-                            {/* Message */}
                             <div style={{ marginBottom: '32px' }}>
-                                <label style={{ display: 'block', fontSize: '11px', fontWeight: 800, letterSpacing: '2px', textTransform: 'uppercase', color: '#9ca3af', marginBottom: '8px' }}>
-                                    Message
-                                </label>
-                                <textarea
-                                    placeholder="Tell us about your project requirements..."
-                                    required
-                                    style={{ width: '100%', padding: '14px 16px', borderRadius: '12px', border: '2px solid #e5e7eb', fontSize: '15px', color: '#1b2a6d', backgroundColor: '#f9fafb', outline: 'none', fontWeight: 600, minHeight: '140px', resize: 'vertical' }}
-                                ></textarea>
+                                <label style={{ display: 'block', fontSize: '11px', fontWeight: 800, letterSpacing: '2px', textTransform: 'uppercase', color: '#9ca3af', marginBottom: '8px' }}>Message</label>
+                                <textarea placeholder="Tell us about your project requirements..." required style={{ width: '100%', padding: '14px 16px', borderRadius: '12px', border: '2px solid #e5e7eb', fontSize: '15px', color: '#1b2a6d', backgroundColor: '#f9fafb', outline: 'none', fontWeight: 600, minHeight: '140px', resize: 'vertical' }} />
                             </div>
-
-                            {/* Submit */}
-                            <button
-                                type="submit"
-                                style={{ width: '100%', padding: '18px', backgroundColor: '#1b2a6d', color: 'white', borderRadius: '12px', fontSize: '16px', fontWeight: 800, border: 'none', cursor: 'pointer', letterSpacing: '1px' }}
-                            >
+                            <button type="submit" style={{ width: '100%', padding: '18px', backgroundColor: '#1b2a6d', color: 'white', borderRadius: '12px', fontSize: '16px', fontWeight: 800, border: 'none', cursor: 'pointer', letterSpacing: '1px' }}>
                                 Send Inquiry
                             </button>
-                            <p style={{ textAlign: 'center', fontSize: '12px', color: '#9ca3af', marginTop: '16px' }}>
-                                We typically respond within 2-4 business hours.
-                            </p>
+                            <p style={{ textAlign: 'center', fontSize: '12px', color: '#9ca3af', marginTop: '16px' }}>We typically respond within 2–4 business hours.</p>
                         </form>
                     </div>
                 </div>
             </div>
+
+            <style jsx>{`
+                .contact-h1 { font-size: 52px; }
+                .contact-layout {
+                    display: grid;
+                    grid-template-columns: 1fr 1.4fr;
+                    gap: 60px;
+                    align-items: start;
+                }
+                @media (max-width: 768px) {
+                    .contact-h1 { font-size: 32px; }
+                    .contact-layout {
+                        grid-template-columns: 1fr;
+                        gap: 28px;
+                    }
+                }
+                @media (min-width: 769px) and (max-width: 1024px) {
+                    .contact-layout {
+                        grid-template-columns: 1fr;
+                        gap: 36px;
+                    }
+                }
+            `}</style>
         </div>
     )
 }

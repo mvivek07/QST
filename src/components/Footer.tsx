@@ -2,71 +2,107 @@
 
 export default function Footer() {
     return (
-        <footer className="footer bg-[var(--primary-blue)] text-white w-full" style={{ paddingTop: '5rem', paddingBottom: '4rem', paddingLeft: '6%', paddingRight: '6%' }}>
-            <div className="w-full border-t border-white/20" style={{ paddingTop: '3.5rem' }}>
-                <div className="grid grid-cols-1 md:grid-cols-12 items-start" style={{ gap: '3rem' }}>
+        <footer style={{ backgroundColor: 'var(--primary-blue)', color: 'white', width: '100%', padding: '4rem 6% 3rem' }}>
+            <div style={{ borderTop: '1px solid rgba(255,255,255,0.15)', paddingTop: '3rem' }}>
+                <div className="footer-grid">
 
-                    {/* Brand Column */}
-                    <div className="md:col-span-4">
-                        <h2 className="font-bold tracking-tighter" style={{ fontSize: '4.5rem', lineHeight: '0.9' }}>
+                    {/* Brand */}
+                    <div className="footer-brand">
+                        <h2 style={{ fontWeight: 800, lineHeight: 0.9, letterSpacing: '-2px' }} className="footer-logo">
                             Quantum<br />Sight
                         </h2>
                     </div>
 
-                    {/* Contact Info Column */}
-                    <div className="md:col-span-4 md:border-l md:border-white/10" style={{ paddingLeft: '3rem' }}>
-                        {/* Label */}
-                        <p className="font-black uppercase text-[var(--accent-blue)]" style={{ fontSize: '0.65rem', letterSpacing: '0.4em', marginBottom: '1rem' }}>Get in touch</p>
-
-                        {/* Phone */}
-                        <p className="font-black tracking-tighter" style={{ fontSize: '2.5rem', lineHeight: 1, marginBottom: '1.25rem' }}>+91 9730323315</p>
-
-                        {/* Email */}
+                    {/* Contact */}
+                    <div className="footer-contact" style={{ borderLeft: '1px solid rgba(255,255,255,0.1)', paddingLeft: '3rem' }}>
+                        <p style={{ color: 'var(--accent-blue)', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.4em', fontSize: '0.65rem', marginBottom: '1rem' }}>
+                            Get in touch
+                        </p>
+                        <p style={{ fontWeight: 900, letterSpacing: '-1px', lineHeight: 1, marginBottom: '1.25rem' }} className="footer-phone">
+                            +91 9730323315
+                        </p>
                         <a
                             href="mailto:contactus@quantumsighttech.com"
-                            className="italic hover:text-[var(--accent-blue)] transition"
-                            style={{ fontSize: '0.875rem', opacity: 0.8, display: 'block', marginBottom: '2rem', letterSpacing: '0.03em' }}
+                            style={{ fontSize: '0.875rem', opacity: 0.8, display: 'block', marginBottom: '2rem', fontStyle: 'italic', letterSpacing: '0.03em', color: 'white', textDecoration: 'none' }}
                         >
                             contactus@quantumsighttech.com
                         </a>
-
-                        {/* Address */}
-                        <div style={{ opacity: 0.8, fontSize: '0.875rem', fontWeight: 500, letterSpacing: '0.04em' }}>
-                            <p style={{ marginBottom: '0.6rem' }}>Vijaya Complex, Mannagudda,</p>
-                            <p style={{ marginBottom: '1.75rem' }}>Mangalore-575003, Karnataka</p>
-                            <p className="text-[var(--accent-blue)] font-black uppercase" style={{ fontSize: '1.5rem', letterSpacing: '0.15em' }}>INDIA</p>
+                        <div style={{ opacity: 0.8, fontSize: '0.875rem', fontWeight: 500 }}>
+                            <p style={{ marginBottom: '0.5rem' }}>Vijaya Complex, Mannagudda,</p>
+                            <p style={{ marginBottom: '1.5rem' }}>Mangalore-575003, Karnataka</p>
+                            <p style={{ color: 'var(--accent-blue)', fontWeight: 900, fontSize: '1.4rem', letterSpacing: '0.15em', textTransform: 'uppercase' }}>IN</p>
                         </div>
                     </div>
 
-                    {/* Links & Legal Column */}
-                    <div className="md:col-span-4 md:border-l md:border-white/10 flex flex-col justify-between h-full" style={{ paddingLeft: '3rem' }}>
-                        {/* Nav Links */}
+                    {/* Links & Legal */}
+                    <div className="footer-links" style={{ borderLeft: '1px solid rgba(255,255,255,0.1)', paddingLeft: '3rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                         <div>
-                            <a
-                                href="/accessibility"
-                                className="block font-bold hover:text-[var(--accent-blue)] transition-colors"
-                                style={{ fontSize: '1rem', marginBottom: '1.25rem' }}
-                            >
+                            <a href="/accessibility" style={{ display: 'block', fontWeight: 700, fontSize: '1rem', color: 'white', textDecoration: 'none', marginBottom: '1.25rem' }}
+                                className="footer-link">
                                 Accessibility Statement
                             </a>
-                            <a
-                                href="/privacy"
-                                className="block font-bold hover:text-[var(--accent-blue)] transition-colors"
-                                style={{ fontSize: '1rem', marginBottom: '1.25rem' }}
-                            >
+                            <a href="/privacy" style={{ display: 'block', fontWeight: 700, fontSize: '1rem', color: 'white', textDecoration: 'none', marginBottom: '1.25rem' }}
+                                className="footer-link">
                                 Privacy Policy
                             </a>
                         </div>
-
-                        {/* Legal */}
-                        <div style={{ opacity: 0.4, marginTop: '4rem', letterSpacing: '0.2em', lineHeight: 1.8 }}>
-                            <p style={{ fontSize: '0.65rem', marginBottom: '0.6rem' }}>© 2026 by QuantumSight. All rights reserved.</p>
-                            <p className="uppercase font-black" style={{ fontSize: '0.65rem', letterSpacing: '0.4em' }}>Powered and secured by QST Engineering</p>
+                        <div style={{ opacity: 0.4, marginTop: '3rem', letterSpacing: '0.2em', lineHeight: 1.8 }}>
+                            <p style={{ fontSize: '0.65rem', marginBottom: '0.5rem' }}>© 2026 by QuantumSight. All rights reserved.</p>
+                            <p style={{ fontSize: '0.65rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.4em' }}>Powered and secured by QST Engineering</p>
                         </div>
                     </div>
 
                 </div>
             </div>
+
+            <style jsx>{`
+                .footer-grid {
+                    display: grid;
+                    grid-template-columns: 1fr 1.4fr 1.2fr;
+                    gap: 2rem;
+                    align-items: start;
+                }
+                .footer-logo { font-size: 4rem; }
+                .footer-phone { font-size: 2rem; }
+                .footer-link:hover { color: var(--accent-blue) !important; }
+
+                @media (max-width: 768px) {
+                    .footer-grid {
+                        grid-template-columns: 1fr;
+                        gap: 2.5rem;
+                    }
+                    .footer-contact,
+                    .footer-links {
+                        border-left: none !important;
+                        padding-left: 0 !important;
+                        border-top: 1px solid rgba(255,255,255,0.1);
+                        padding-top: 2rem;
+                    }
+                    .footer-logo { font-size: 3rem; }
+                    .footer-phone { font-size: 1.75rem; }
+                    .footer-links {
+                        gap: 2rem;
+                    }
+                }
+
+                @media (min-width: 769px) and (max-width: 1024px) {
+                    .footer-grid {
+                        grid-template-columns: 1fr 1fr;
+                        gap: 2rem;
+                    }
+                    .footer-links {
+                        grid-column: 1 / -1;
+                        border-left: none !important;
+                        padding-left: 0 !important;
+                        border-top: 1px solid rgba(255,255,255,0.1);
+                        padding-top: 2rem;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: flex-end;
+                    }
+                    .footer-logo { font-size: 3.5rem; }
+                }
+            `}</style>
         </footer>
     )
 }
