@@ -118,7 +118,7 @@ export default function Home() {
             </section>
 
             {/* Why Choose Us */}
-            <section className="why-us min-h-screen flex flex-col justify-center items-center px-6">
+            <section className="why-us flex flex-col items-center px-6">
 
                 <h2 className="text-5xl font-bold text-center mb-12 text-[var(--primary-blue)]">
                     Why Choose Our Surveillance Solutions?

@@ -162,6 +162,7 @@ section {
     color: white;
     text-align: center;
     padding-top: 4rem;
+    padding-bottom: 4rem;
 }
 
 .solutions-grid {
@@ -184,6 +185,7 @@ section {
 }
 
 .why-us {
+    padding-top: 4rem;
     padding-bottom: 4rem;
 }
 
@@ -327,6 +329,11 @@ footer {
     /* Solutions */
     .solutions {
         padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+    .why-us {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
     }
     .solutions-grid {
         grid-template-columns: 1fr;
@@ -387,6 +394,11 @@ footer {
     }
     .solutions {
         padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    .why-us {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
     }
     .solutions-grid {
         grid-template-columns: repeat(2, 1fr);
