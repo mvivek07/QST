@@ -13,7 +13,7 @@ export default function About() {
                     Security for the Modern Era.
                 </h1>
                 <p style={{ fontSize: '18px', color: '#6b7280', lineHeight: 1.8, maxWidth: '640px', margin: '0 auto' }}>
-                    QuantumSight was born out of a vision to bridge the gap between traditional surveillance and the limitless potential of AI-driven security. We don't just sell cameras; we build intelligent ecosystems that protect what matters most.
+                    QuantumSight Technologies was born out of a vision to bridge the gap between traditional surveillance and the limitless potential of AI-driven security. We don't just sell cameras; we build intelligent ecosystems that protect what matters most.
                 </p>
             </div>
 
@@ -32,7 +32,7 @@ export default function About() {
                             Engineering Excellence
                         </h2>
                         <p style={{ fontSize: '17px', color: '#6b7280', lineHeight: 1.8 }}>
-                            Our team of engineers and security experts work tirelessly to develop hardware and software that can withstand the most demanding environments. From forensic-level imaging to real-time behavioral analytics, QuantumSight is at the forefront of the industry.
+                            Our team of engineers and security experts work tirelessly to develop hardware and software that can withstand the most demanding environments. From forensic-level imaging to real-time behavioral analytics, QuantumSight Technologies is at the forefront of the industry.
                         </p>
                     </div>
                 </div>
@@ -45,7 +45,7 @@ export default function About() {
                         Our Values
                     </p>
                     <h2 style={{ fontWeight: 900, color: '#1b2a6d', marginBottom: '56px', lineHeight: 1.1 }} className="about-h2">
-                        The QuantumSight Standard
+                        The QuantumSight Technologies Standard
                     </h2>
 
                     <div className="rg-3">

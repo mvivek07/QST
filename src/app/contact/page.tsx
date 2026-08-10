@@ -1,11 +1,9 @@
 'use client'
 
+import { useContactForm } from '@/hooks/useContactForm'
+
 export default function Contact() {
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault()
-        alert('Thank you for contacting QuantumSight. We will get back to you shortly.')
-        ;(e.target as HTMLFormElement).reset()
-    }
+    const { handleSubmit, handlePhoneInputChange, isSubmitting, error } = useContactForm()
 
     return (
         <div style={{ paddingTop: '100px', minHeight: '100vh', backgroundColor: '#f8fafc' }}>
@@ -54,27 +52,28 @@ export default function Contact() {
                             <div className="rg-form" style={{ marginBottom: '24px' }}>
                                 <div>
                                     <label style={{ display: 'block', fontSize: '11px', fontWeight: 800, letterSpacing: '2px', textTransform: 'uppercase', color: '#9ca3af', marginBottom: '8px' }}>First Name</label>
-                                    <input type="text" placeholder="John" required style={{ width: '100%', padding: '14px 16px', borderRadius: '12px', border: '2px solid #e5e7eb', fontSize: '15px', color: '#1b2a6d', backgroundColor: '#f9fafb', outline: 'none', fontWeight: 600 }} />
+                                    <input name="firstName" type="text" placeholder="John" required style={{ width: '100%', padding: '14px 16px', borderRadius: '12px', border: '2px solid #e5e7eb', fontSize: '15px', color: '#1b2a6d', backgroundColor: '#f9fafb', outline: 'none', fontWeight: 600 }} />
                                 </div>
                                 <div>
                                     <label style={{ display: 'block', fontSize: '11px', fontWeight: 800, letterSpacing: '2px', textTransform: 'uppercase', color: '#9ca3af', marginBottom: '8px' }}>Last Name</label>
-                                    <input type="text" placeholder="Doe" required style={{ width: '100%', padding: '14px 16px', borderRadius: '12px', border: '2px solid #e5e7eb', fontSize: '15px', color: '#1b2a6d', backgroundColor: '#f9fafb', outline: 'none', fontWeight: 600 }} />
+                                    <input name="lastName" type="text" placeholder="Doe" required style={{ width: '100%', padding: '14px 16px', borderRadius: '12px', border: '2px solid #e5e7eb', fontSize: '15px', color: '#1b2a6d', backgroundColor: '#f9fafb', outline: 'none', fontWeight: 600 }} />
                                 </div>
                             </div>
                             <div style={{ marginBottom: '24px' }}>
                                 <label style={{ display: 'block', fontSize: '11px', fontWeight: 800, letterSpacing: '2px', textTransform: 'uppercase', color: '#9ca3af', marginBottom: '8px' }}>Work Email</label>
-                                <input type="email" placeholder="john@company.com" required style={{ width: '100%', padding: '14px 16px', borderRadius: '12px', border: '2px solid #e5e7eb', fontSize: '15px', color: '#1b2a6d', backgroundColor: '#f9fafb', outline: 'none', fontWeight: 600 }} />
+                                <input name="email" type="email" placeholder="john@company.com" pattern="[^\s@]+@[^\s@]+\.[^\s@]+" title="Please enter a valid email with @" required style={{ width: '100%', padding: '14px 16px', borderRadius: '12px', border: '2px solid #e5e7eb', fontSize: '15px', color: '#1b2a6d', backgroundColor: '#f9fafb', outline: 'none', fontWeight: 600 }} />
                             </div>
                             <div style={{ marginBottom: '24px' }}>
                                 <label style={{ display: 'block', fontSize: '11px', fontWeight: 800, letterSpacing: '2px', textTransform: 'uppercase', color: '#9ca3af', marginBottom: '8px' }}>Phone Number</label>
-                                <input type="tel" placeholder="+91 00000 00000" style={{ width: '100%', padding: '14px 16px', borderRadius: '12px', border: '2px solid #e5e7eb', fontSize: '15px', color: '#1b2a6d', backgroundColor: '#f9fafb', outline: 'none', fontWeight: 600 }} />
+                                <input name="phone" type="tel" inputMode="numeric" placeholder="9730323315" pattern="[0-9]{10,15}" title="Enter 10-15 digits only" minLength={10} maxLength={15} onInput={handlePhoneInputChange} required style={{ width: '100%', padding: '14px 16px', borderRadius: '12px', border: '2px solid #e5e7eb', fontSize: '15px', color: '#1b2a6d', backgroundColor: '#f9fafb', outline: 'none', fontWeight: 600 }} />
                             </div>
                             <div style={{ marginBottom: '32px' }}>
                                 <label style={{ display: 'block', fontSize: '11px', fontWeight: 800, letterSpacing: '2px', textTransform: 'uppercase', color: '#9ca3af', marginBottom: '8px' }}>Message</label>
-                                <textarea placeholder="Tell us about your project requirements..." required style={{ width: '100%', padding: '14px 16px', borderRadius: '12px', border: '2px solid #e5e7eb', fontSize: '15px', color: '#1b2a6d', backgroundColor: '#f9fafb', outline: 'none', fontWeight: 600, minHeight: '140px', resize: 'vertical' }} />
+                                <textarea name="message" placeholder="Tell us about your project requirements..." minLength={10} required style={{ width: '100%', padding: '14px 16px', borderRadius: '12px', border: '2px solid #e5e7eb', fontSize: '15px', color: '#1b2a6d', backgroundColor: '#f9fafb', outline: 'none', fontWeight: 600, minHeight: '140px', resize: 'vertical' }} />
                             </div>
-                            <button type="submit" style={{ width: '100%', padding: '18px', backgroundColor: '#1b2a6d', color: 'white', borderRadius: '12px', fontSize: '16px', fontWeight: 800, border: 'none', cursor: 'pointer', letterSpacing: '1px' }}>
-                                Send Inquiry
+                            {error && <p style={{ color: '#dc2626', fontSize: '14px', fontWeight: 600, marginBottom: '16px' }}>{error}</p>}
+                            <button type="submit" disabled={isSubmitting} style={{ width: '100%', padding: '18px', backgroundColor: '#1b2a6d', color: 'white', borderRadius: '12px', fontSize: '16px', fontWeight: 800, border: 'none', cursor: isSubmitting ? 'not-allowed' : 'pointer', letterSpacing: '1px', opacity: isSubmitting ? 0.6 : 1 }}>
+                                {isSubmitting ? 'Sending...' : 'Send Inquiry'}
                             </button>
                             <p style={{ textAlign: 'center', fontSize: '12px', color: '#9ca3af', marginTop: '16px' }}>We typically respond within 2–4 business hours.</p>
                         </form>

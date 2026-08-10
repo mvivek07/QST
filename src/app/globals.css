@@ -131,6 +131,8 @@ section {
     display: flex;
     gap: 6rem;
     align-items: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 }
 
 .intro-content h2 {
@@ -159,6 +161,7 @@ section {
     background: var(--primary-blue);
     color: white;
     text-align: center;
+    padding-top: 4rem;
 }
 
 .solutions-grid {
@@ -178,6 +181,10 @@ section {
     font-size: 3rem;
     color: var(--primary-blue);
     margin-bottom: 4rem;
+}
+
+.why-us {
+    padding-bottom: 4rem;
 }
 
 .feature-row {
@@ -204,7 +211,7 @@ section {
     color: white;
     display: flex;
     gap: 5rem;
-    padding: 151px 8%;
+    padding: 4rem 8% 5rem;
 }
 
 .contact-info {
@@ -219,9 +226,10 @@ section {
 
 .contact-form-container {
     background: white;
-    padding: 4rem;
+    padding: 2rem;
     border-radius: 16px;
-    flex: 1.5;
+    flex: 1;
+    max-width: 620px;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
@@ -249,12 +257,12 @@ section {
 
 .submit-btn {
     width: 100%;
-    padding: 1.5rem;
+    padding: 0.875rem;
     background: linear-gradient(135deg, var(--primary-blue) 0%, #2563eb 100%);
     color: white;
     border: none;
-    border-radius: 12px;
-    font-size: 1.25rem;
+    border-radius: 10px;
+    font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
     box-shadow: 0 10px 20px -5px rgba(27, 42, 109, 0.4);
@@ -302,6 +310,8 @@ footer {
     .intro {
         flex-direction: column;
         gap: 2.5rem;
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
     }
     .intro-content h2 {
         font-size: 2.4rem;
@@ -315,6 +325,9 @@ footer {
     }
 
     /* Solutions */
+    .solutions {
+        padding-top: 2.5rem;
+    }
     .solutions-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -324,7 +337,7 @@ footer {
     .contact {
         flex-direction: column;
         gap: 2.5rem;
-        padding: 60px 5%;
+        padding: 2.5rem 5% 3rem;
     }
     .contact-form-container {
         padding: 1.75rem;
@@ -369,6 +382,11 @@ footer {
     }
     .intro {
         gap: 3rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    .solutions {
+        padding-top: 3rem;
     }
     .solutions-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -379,6 +397,6 @@ footer {
     .contact {
         flex-direction: column;
         gap: 3rem;
-        padding: 80px 5%;
+        padding: 3rem 5% 4rem;
     }
 }

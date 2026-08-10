@@ -1,8 +1,10 @@
 'use client'
 
 import { useEffect } from 'react'
+import { useContactForm } from '@/hooks/useContactForm'
 
 export default function Home() {
+    const { handleSubmit, handlePhoneInputChange, isSubmitting, error } = useContactForm()
     useEffect(() => {
         const handleScroll = () => {
             // Fade-in animation logic
@@ -29,12 +31,6 @@ export default function Home() {
 
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
-
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault()
-        alert('Thank you for contacting QuantumSight. We will get back to you shortly.')
-            ; (e.target as HTMLFormElement).reset()
-    }
 
     return (
         <div className="min-h-screen">
@@ -64,7 +60,7 @@ export default function Home() {
                 <div className="intro-content flex-1 text-left">
                     <h2 className="text-5xl font-bold leading-tight mb-8 text-[var(--primary-blue)]">Redefining Security, Redefining Possibilities</h2>
                     <p className="text-xl text-gray-600 mb-14 max-w-2xl leading-relaxed">
-                        QuantumSight is a surveillance solutions provider dedicated to leading the surveillance security systems for both residential and corporate needs. We specialize in developing the latest surveillance technology that redefines the standards of security, delivering unparalleled precision and reliability.
+                        QuantumSight Technologies is a surveillance solutions provider dedicated to leading the surveillance security systems for both residential and corporate needs. We specialize in developing the latest surveillance technology that redefines the standards of security, delivering unparalleled precision and reliability.
                     </p>
                     <a href="/about" className="read-more" style={{ marginTop: '2.5rem', display: 'inline-block' }}>Read More</a>
                 </div>
@@ -206,39 +202,45 @@ export default function Home() {
 
             </section>
             {/* Contact Home Section */}
-            <section id="contact" className="contact py-32 bg-[var(--primary-blue)] text-white">
-                <div className="flex-1">
-                    <h2 className="text-6xl font-bold mb-8">Contact Us</h2>
-                    <p className="text-xl opacity-90 max-w-md">Get in touch with us for any inquiries or assistance regarding our surveillance equipment products and services. We are here to help you with your security needs.</p>
+            <section id="contact" className="contact bg-[var(--primary-blue)] text-white">
+                <div className="flex-1" style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
+                    <h2 className="text-6xl font-bold" style={{ margin: 0, lineHeight: 1.1 }}>Contact Us</h2>
+                    <p className="text-xl opacity-90 max-w-md" style={{ margin: 0 }}>Get in touch with us for any inquiries or assistance regarding our surveillance equipment products and services. We are here to help you with your security needs.</p>
                 </div>
-                <div className="contact-form-container !max-w-[850px] !p-10 !md:p-16">
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                        <div className="grid md:grid-cols-2 gap-6">
+                <div className="contact-form-container !max-w-[620px] !p-6 !md:p-8">
+                    <form onSubmit={handleSubmit} className="space-y-4">
+                        <div className="grid md:grid-cols-2 gap-4">
                             <div className="form-group mb-0">
-                                <label className="block text-xs font-black uppercase tracking-[0.2em] text-[#1b2a6d] mb-2 ml-1">First Name</label>
-                                <input type="text" placeholder="John" className="w-full bg-gray-50 border border-gray-100 text-[#1b2a6d] placeholder-gray-400 p-4 rounded-xl focus:bg-white focus:border-[#2563eb] outline-none transition text-sm" required />
+                                <label className="block text-xs font-black uppercase tracking-[0.2em] text-[#1b2a6d] mb-1.5 ml-1">First Name</label>
+                                <input name="firstName" type="text" placeholder="John" className="w-full bg-gray-50 border border-gray-100 text-[#1b2a6d] placeholder-gray-400 p-3 rounded-lg focus:bg-white focus:border-[#2563eb] outline-none transition text-sm" required />
                             </div>
                             <div className="form-group mb-0">
-                                <label className="block text-xs font-black uppercase tracking-[0.2em] text-[#1b2a6d] mb-2 ml-1">Last Name</label>
-                                <input type="text" placeholder="Doe" className="w-full bg-gray-50 border border-gray-100 text-[#1b2a6d] placeholder-gray-400 p-4 rounded-xl focus:bg-white focus:border-[#2563eb] outline-none transition text-sm" required />
+                                <label className="block text-xs font-black uppercase tracking-[0.2em] text-[#1b2a6d] mb-1.5 ml-1">Last Name</label>
+                                <input name="lastName" type="text" placeholder="Doe" className="w-full bg-gray-50 border border-gray-100 text-[#1b2a6d] placeholder-gray-400 p-3 rounded-lg focus:bg-white focus:border-[#2563eb] outline-none transition text-sm" required />
                             </div>
                         </div>
                         <div className="form-group mb-0">
-                            <label className="block text-xs font-black uppercase tracking-[0.2em] text-[#1b2a6d] mb-2 ml-1">Work Email</label>
-                            <input type="email" placeholder="john@company.com" className="w-full bg-gray-50 border border-gray-100 text-[#1b2a6d] placeholder-gray-400 p-4 rounded-xl focus:bg-white focus:border-[#2563eb] outline-none transition text-sm" required />
+                            <label className="block text-xs font-black uppercase tracking-[0.2em] text-[#1b2a6d] mb-1.5 ml-1">Work Email</label>
+                            <input name="email" type="email" placeholder="john@company.com" pattern="[^\s@]+@[^\s@]+\.[^\s@]+" title="Please enter a valid email with @" className="w-full bg-gray-50 border border-gray-100 text-[#1b2a6d] placeholder-gray-400 p-3 rounded-lg focus:bg-white focus:border-[#2563eb] outline-none transition text-sm" required />
                         </div>
                         <div className="form-group mb-0">
-                            <label className="block text-xs font-black uppercase tracking-[0.2em] text-[#1b2a6d] mb-2 ml-1">Phone Number</label>
-                            <input type="tel" placeholder="+91 00000 00000" className="w-full bg-gray-50 border border-gray-100 text-[#1b2a6d] placeholder-gray-400 p-4 rounded-xl focus:bg-white focus:border-[#2563eb] outline-none transition text-sm" />
+                            <label className="block text-xs font-black uppercase tracking-[0.2em] text-[#1b2a6d] mb-1.5 ml-1">Phone Number</label>
+                            <input name="phone" type="tel" inputMode="numeric" placeholder="9730323315" pattern="[0-9]{10,15}" title="Enter 10-15 digits only" minLength={10} maxLength={15} onInput={handlePhoneInputChange} className="w-full bg-gray-50 border border-gray-100 text-[#1b2a6d] placeholder-gray-400 p-3 rounded-lg focus:bg-white focus:border-[#2563eb] outline-none transition text-sm" required />
                         </div>
                         <div className="form-group mb-0">
-                            <label className="block text-xs font-black uppercase tracking-[0.2em] text-[#1b2a6d] mb-2 ml-1">Message</label>
+                            <label className="block text-xs font-black uppercase tracking-[0.2em] text-[#1b2a6d] mb-1.5 ml-1">Message</label>
                             <textarea
+                                name="message"
                                 placeholder="Tell us about your project requirements..."
-                                className="w-full p-6 border border-gray-100 rounded-2xl bg-gray-50 text-[#1b2a6d] placeholder-gray-400 focus:bg-white focus:border-[#2563eb] transition duration-300 min-h-[160px] outline-none text-sm font-medium"
+                                className="w-full p-4 border border-gray-100 rounded-xl bg-gray-50 text-[#1b2a6d] placeholder-gray-400 focus:bg-white focus:border-[#2563eb] transition duration-300 min-h-[120px] outline-none text-sm font-medium"
+                                minLength={10}
+                                required
                             ></textarea>
                         </div>
-                        <button type="submit" className="submit-btn bg-[#1b2a6d] text-white hover:bg-[#2563eb] transition w-full py-5 rounded-xl font-black text-xl shadow-2xl transform hover:-translate-y-1 tracking-tight">Send Message</button>
+                        {error && <p className="text-sm text-red-600 font-medium">{error}</p>}
+                        <button type="submit" disabled={isSubmitting} className="submit-btn bg-[#1b2a6d] text-white hover:bg-[#2563eb] transition w-full py-3.5 rounded-lg font-black text-base shadow-xl transform hover:-translate-y-1 tracking-tight disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none">
+                            {isSubmitting ? 'Sending...' : 'Send Message'}
+                        </button>
                     </form>
                 </div>
             </section>

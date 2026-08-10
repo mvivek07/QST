@@ -18,7 +18,7 @@ export default function AccessibilityStatement() {
                 {/* Intro box */}
                 <div style={{ background: '#f8f9fc', border: '1px solid #e5e7eb', borderRadius: '1rem', padding: '2rem 2.5rem', marginBottom: '3rem' }}>
                     <p style={{ color: 'var(--primary-blue)', fontWeight: 500, lineHeight: 1.8, fontSize: '1.05rem' }}>
-                        At QuantumSight, we are committed to ensuring that our surveillance solutions
+                        At QuantumSight Technologies, we are committed to ensuring that our surveillance solutions
                         are accessible to all individuals, including those with disabilities. We strive
                         to make our website and surveillance products usable and enjoyable for everyone,
                         regardless of their abilities.
@@ -52,7 +52,7 @@ export default function AccessibilityStatement() {
                 <div style={{ marginBottom: '3rem' }}>
                     <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: 'var(--primary-blue)', marginBottom: '1rem' }}>Our commitment to surveillance accessibility</h2>
                     <p style={{ color: '#4b5563', lineHeight: 1.9, fontSize: '1rem', marginBottom: '1.25rem' }}>
-                        QuantumSight has implemented accessibility features in accordance with industry
+                        QuantumSight Technologies has implemented accessibility features in accordance with industry
                         standards and best practices. Our surveillance solutions are designed to be
                         compatible with assistive technologies, providing functionalities such as
                         screen reader support, keyboard navigation, and customizable display settings.
@@ -73,7 +73,7 @@ export default function AccessibilityStatement() {
                 <div style={{ marginBottom: '3rem' }}>
                     <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: 'var(--primary-blue)', marginBottom: '1rem' }}>Declaration of partial compliance</h2>
                     <p style={{ color: '#4b5563', lineHeight: 1.9, fontSize: '1rem' }}>
-                        QuantumSight acknowledges that certain surveillance features may depend on
+                        QuantumSight Technologies acknowledges that certain surveillance features may depend on
                         third-party content. In such cases, we are dedicated to achieving partial
                         compliance with accessibility standards to ensure a seamless user experience
                         across our entire range of surveillance solutions.
@@ -86,7 +86,7 @@ export default function AccessibilityStatement() {
                 <div style={{ marginBottom: '3rem' }}>
                     <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: 'var(--primary-blue)', marginBottom: '1rem' }}>Accessibility in our organization</h2>
                     <p style={{ color: '#4b5563', lineHeight: 1.9, fontSize: '1rem' }}>
-                        QuantumSight is committed to ensuring accessibility not only in our digital
+                        QuantumSight Technologies is committed to ensuring accessibility not only in our digital
                         offerings but also within our physical facilities. Our offices and branches
                         are designed to accommodate individuals with disabilities, and we provide
                         additional accessibility arrangements to support customers in accessing our

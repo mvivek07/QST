@@ -7,7 +7,10 @@ import { usePathname } from 'next/navigation'
 export default function Header() {
     const [scrolled, setScrolled] = useState(false)
     const [menuOpen, setMenuOpen] = useState(false)
+    const [mounted, setMounted] = useState(false)
     const pathname = usePathname()
+
+    useEffect(() => { setMounted(true) }, [])
 
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 50)
@@ -47,7 +50,7 @@ export default function Header() {
                 {/* Logo */}
                 <div style={{ zIndex: 60 }}>
                     <Link href="/">
-                        <img src="/images/logo.png" alt="QuantumSight Logo" style={{ height: '40px' }} />
+                        <img src="/images/logo.png" alt="QuantumSight Technologies" style={{ height: '52px', width: 'auto' }} />
                     </Link>
                 </div>
 
@@ -94,36 +97,51 @@ export default function Header() {
                     </Link>
                 </div>
 
-                {/* Hamburger — mobile only */}
-                <button
-                    className="hamburger"
-                    onClick={() => setMenuOpen(!menuOpen)}
-                    aria-label="Toggle menu"
-                    style={{
-                        background: 'none', border: 'none', cursor: 'pointer',
-                        padding: '8px', zIndex: 60,
-                        display: 'flex', flexDirection: 'column', gap: '5px',
-                    }}
-                >
-                    <span style={{
-                        display: 'block', width: '24px', height: '2px',
-                        backgroundColor: menuOpen ? 'white' : 'var(--primary-blue)',
-                        transition: 'all 0.3s',
-                        transform: menuOpen ? 'rotate(45deg) translate(5px, 5px)' : 'none',
-                    }} />
-                    <span style={{
-                        display: 'block', width: '24px', height: '2px',
-                        backgroundColor: menuOpen ? 'white' : 'var(--primary-blue)',
-                        transition: 'all 0.3s',
-                        opacity: menuOpen ? 0 : 1,
-                    }} />
-                    <span style={{
-                        display: 'block', width: '24px', height: '2px',
-                        backgroundColor: menuOpen ? 'white' : 'var(--primary-blue)',
-                        transition: 'all 0.3s',
-                        transform: menuOpen ? 'rotate(-45deg) translate(5px, -5px)' : 'none',
-                    }} />
-                </button>
+                {/* Hamburger — mobile only; render after mount to avoid extension-injected attrs */}
+                {mounted ? (
+                    <button
+                        className="hamburger"
+                        onClick={() => setMenuOpen(!menuOpen)}
+                        aria-label="Toggle menu"
+                        style={{
+                            background: 'none', border: 'none', cursor: 'pointer',
+                            padding: '8px', zIndex: 60,
+                            display: 'flex', flexDirection: 'column', gap: '5px',
+                        }}
+                    >
+                        <span style={{
+                            display: 'block', width: '24px', height: '2px',
+                            backgroundColor: menuOpen ? 'white' : 'var(--primary-blue)',
+                            transition: 'all 0.3s',
+                            transform: menuOpen ? 'rotate(45deg) translate(5px, 5px)' : 'none',
+                        }} />
+                        <span style={{
+                            display: 'block', width: '24px', height: '2px',
+                            backgroundColor: menuOpen ? 'white' : 'var(--primary-blue)',
+                            transition: 'all 0.3s',
+                            opacity: menuOpen ? 0 : 1,
+                        }} />
+                        <span style={{
+                            display: 'block', width: '24px', height: '2px',
+                            backgroundColor: menuOpen ? 'white' : 'var(--primary-blue)',
+                            transition: 'all 0.3s',
+                            transform: menuOpen ? 'rotate(-45deg) translate(5px, -5px)' : 'none',
+                        }} />
+                    </button>
+                ) : (
+                    <div
+                        className="hamburger"
+                        aria-hidden="true"
+                        style={{
+                            padding: '8px', zIndex: 60,
+                            display: 'flex', flexDirection: 'column', gap: '5px',
+                        }}
+                    >
+                        <span style={{ display: 'block', width: '24px', height: '2px', backgroundColor: 'var(--primary-blue)' }} />
+                        <span style={{ display: 'block', width: '24px', height: '2px', backgroundColor: 'var(--primary-blue)' }} />
+                        <span style={{ display: 'block', width: '24px', height: '2px', backgroundColor: 'var(--primary-blue)' }} />
+                    </div>
+                )}
             </header>
 
             {/* Mobile full-screen overlay */}

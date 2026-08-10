@@ -8,8 +8,12 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 
 export const metadata: Metadata = {
-  title: "QuantumSight - Empower Your Surveillance",
+  title: "QuantumSight Technologies - Empower Your Surveillance",
   description: "Advanced surveillance solutions for home and corporate needs.",
+  icons: {
+    icon: "/images/favicon.png",
+    apple: "/images/favicon.png",
+  },
 };
 
 export default function RootLayout({

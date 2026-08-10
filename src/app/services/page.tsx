@@ -63,7 +63,7 @@ export default function Services() {
                             Reliability &amp; Durability
                         </h2>
                         <p style={{ fontSize: '17px', color: '#6b7280', lineHeight: 1.8 }}>
-                            Reliability and durability are at the core of our surveillance solutions. Each QuantumSight system undergoes rigorous testing and quality assurance processes to guarantee top-notch performance and long-term reliability.
+                            Reliability and durability are at the core of our surveillance solutions. Each QuantumSight Technologies system undergoes rigorous testing and quality assurance processes to guarantee top-notch performance and long-term reliability.
                         </p>
                     </div>
                 </div>
