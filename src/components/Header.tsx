@@ -50,7 +50,7 @@ export default function Header() {
                 {/* Logo */}
                 <div style={{ zIndex: 60 }}>
                     <Link href="/">
-                        <img src="/images/logo.png" alt="QuantumSight Technologies" style={{ height: '52px', width: 'auto' }} />
+                        <img src="/images/logo.png" alt="QuantumSight Technologies" style={{ height: '60px', width: 'auto', display: 'block' }} />
                     </Link>
                 </div>
 
