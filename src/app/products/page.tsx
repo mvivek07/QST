@@ -1,6 +1,6 @@
 'use client'
 
-export default function Services() {
+export default function Products() {
     return (
         <div style={{ minHeight: '100vh', backgroundColor: '#ffffff', paddingTop: '80px' }}>
 

@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import HeaderLoader from "@/components/HeaderLoader";
+import FooterLoader from "@/components/FooterLoader";
+import StripExtensionAttrs from "@/components/StripExtensionAttrs";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
@@ -22,11 +23,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${outfit.variable} antialiased`}>
-      <body className="bg-white">
-        <Header />
-        <main>{children}</main>
-        <Footer />
+    <html lang="en" className={`${inter.variable} ${outfit.variable} antialiased`} suppressHydrationWarning>
+      <body className="bg-white" suppressHydrationWarning>
+        <StripExtensionAttrs />
+        <HeaderLoader />
+        <main suppressHydrationWarning>{children}</main>
+        <FooterLoader />
       </body>
     </html>
   );
