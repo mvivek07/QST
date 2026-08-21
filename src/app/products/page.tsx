@@ -11,7 +11,7 @@ export default function Products() {
                         Innovative Technology
                     </p>
                     <h1 style={{ fontWeight: 900, color: '#1b2a6d', lineHeight: 1.1, marginBottom: '20px' }} className="svc-h1">
-                        Precision Surveillance Programs.
+                        Precision Surveillance Products
                     </h1>
                     <p style={{ fontSize: '18px', color: '#6b7280', lineHeight: 1.7, maxWidth: '560px', margin: '0 auto' }}>
                         Explore our world-class surveillance solutions designed for any scale, from individual residences to global corporate infrastructures.
