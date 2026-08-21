@@ -62,7 +62,7 @@ export default function Home() {
                     <p className="text-xl text-gray-600 mb-14 max-w-2xl leading-relaxed">
                         QuantumSight Technologies is a surveillance solutions provider dedicated to leading the surveillance security systems for both residential and corporate needs. We specialize in developing the latest surveillance technology that redefines the standards of security, delivering unparalleled precision and reliability.
                     </p>
-                    <a href="/about" className="read-more" style={{ marginTop: '2.5rem', display: 'inline-block' }}>Read More</a>
+                    <a href="/products" className="read-more" style={{ marginTop: '2.5rem', display: 'inline-block' }}>Read More</a>
                 </div>
                 <div className="intro-images flex-1 max-w-xl">
                     <img src="/images/drone_intro.png" alt="Drone Surveillance" className="rounded-lg shadow-xl w-full h-auto" />
@@ -225,7 +225,7 @@ export default function Home() {
                         </div>
                         <div className="form-group mb-0">
                             <label className="block text-xs font-black uppercase tracking-[0.2em] text-[#1b2a6d] mb-1.5 ml-1">Phone Number</label>
-                            <input name="phone" type="tel" inputMode="numeric" placeholder="9730323315" pattern="[0-9]{10,15}" title="Enter 10-15 digits only" minLength={10} maxLength={15} onInput={handlePhoneInputChange} className="w-full bg-gray-50 border border-gray-100 text-[#1b2a6d] placeholder-gray-400 p-3 rounded-lg focus:bg-white focus:border-[#2563eb] outline-none transition text-sm" required />
+                            <input name="phone" type="tel" inputMode="numeric" placeholder="00000 00000" pattern="[0-9]{10,15}" title="Enter 10-15 digits only" minLength={10} maxLength={15} onInput={handlePhoneInputChange} className="w-full bg-gray-50 border border-gray-100 text-[#1b2a6d] placeholder-gray-400 p-3 rounded-lg focus:bg-white focus:border-[#2563eb] outline-none transition text-sm" required />
                         </div>
                         <div className="form-group mb-0">
                             <label className="block text-xs font-black uppercase tracking-[0.2em] text-[#1b2a6d] mb-1.5 ml-1">Message</label>

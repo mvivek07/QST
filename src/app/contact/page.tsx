@@ -65,7 +65,7 @@ export default function Contact() {
                             </div>
                             <div style={{ marginBottom: '24px' }}>
                                 <label style={{ display: 'block', fontSize: '11px', fontWeight: 800, letterSpacing: '2px', textTransform: 'uppercase', color: '#9ca3af', marginBottom: '8px' }}>Phone Number</label>
-                                <input name="phone" type="tel" inputMode="numeric" placeholder="9730323315" pattern="[0-9]{10,15}" title="Enter 10-15 digits only" minLength={10} maxLength={15} onInput={handlePhoneInputChange} required style={{ width: '100%', padding: '14px 16px', borderRadius: '12px', border: '2px solid #e5e7eb', fontSize: '15px', color: '#1b2a6d', backgroundColor: '#f9fafb', outline: 'none', fontWeight: 600 }} />
+                                <input name="phone" type="tel" inputMode="numeric" placeholder="00000 00000" pattern="[0-9]{10,15}" title="Enter 10-15 digits only" minLength={10} maxLength={15} onInput={handlePhoneInputChange} required style={{ width: '100%', padding: '14px 16px', borderRadius: '12px', border: '2px solid #e5e7eb', fontSize: '15px', color: '#1b2a6d', backgroundColor: '#f9fafb', outline: 'none', fontWeight: 600 }} />
                             </div>
                             <div style={{ marginBottom: '32px' }}>
                                 <label style={{ display: 'block', fontSize: '11px', fontWeight: 800, letterSpacing: '2px', textTransform: 'uppercase', color: '#9ca3af', marginBottom: '8px' }}>Message</label>

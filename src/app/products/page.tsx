@@ -60,10 +60,10 @@ export default function Products() {
                             Quality
                         </span>
                         <h2 style={{ fontWeight: 900, color: '#1b2a6d', marginBottom: '24px', lineHeight: 1.2 }} className="svc-h2">
-                            Reliability &amp; Durability
+                            Reliable and Durable
                         </h2>
                         <p style={{ fontSize: '17px', color: '#6b7280', lineHeight: 1.8 }}>
-                            Reliability and durability are at the core of our surveillance solutions. Each QuantumSight Technologies system undergoes rigorous testing and quality assurance processes to guarantee top-notch performance and long-term reliability.
+                            Reliable and Durable are at the core of our surveillance solutions. Each QuantumSight Technologies system undergoes rigorous testing and quality assurance processes to guarantee top-notch performance and long-term reliability.
                         </p>
                     </div>
                 </div>
